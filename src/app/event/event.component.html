@@ -1,0 +1,45 @@
+<p>Click On Below Button To Increase Count</p>
+<button (click)="addCount()">Increase Count +</button>
+<br />
+Count : {{count}}
+<br />
+<br />
+<p>Click On Below Button To Change The Value </p>
+<button (click)="changeValue('John')">Change The Value</button>
+<p>Value : {{value}}</p>
+<br />
+<br />
+<p>Let's understand $ Event</p>
+<p>Change(Input) Event</p>
+<input type="text" (input)="inputChange($event)"  placeholder="Enter your name" />
+<p>{{text}}</p>
+<br />
+<br />
+<p>Change(Dropdown)Event</p>
+<select (change)="selectValue($event)">
+    <option value="angular">Angular</option>
+    <option value="react">React</option>
+    <option value="nodejs">NodeJs</option>
+    <option value="nextjs">NextJs</option>
+</select>
+<p>{{dropValue}}</p>
+<br />
+<br />
+<p>Change(Scroll)Event</p>
+<div style="height: 100px; overflow-y: scroll;" (scroll)="onScroll($event)">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+</div>

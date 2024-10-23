@@ -1,0 +1,50 @@
+<div class="notification">
+    <p>You have (5) New Notifications</p>
+</div>
+<div>
+    <p>Dynamic Interpolation Binding</p>
+    <p>Welcome Back, {{name}}</p>
+</div>
+<div class="card">
+    <p>Name : {{employee.name}}</p>
+    <p>Position : {{employee.position}}</p>
+    <p>Department : {{employee.department}}</p>
+</div>
+<div>
+    <p>Property Binding</p>
+    <img [src] = "image" alt="" height="150px">
+</div>
+<div>
+    <input type="text" name="" [value]="formValue" id="">
+</div>
+<br/>
+<br/>
+<!-- Product Card -->
+<p>Attribute Binding</p>
+<div class="product-card">
+    <div class="product-image">
+        <img src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/primary/ProductShowcasesampleimages/JPEG/Product+Showcase-1.jpg" alt="Product Image">
+    </div>
+    <div class="product-info">
+        <h2>Product Name</h2>
+        <p class="price">$49.99</p>
+        <p class="description">This is a brief description of the product.</p>
+        <button class="buy-button" [disabled]='outStock'>Buy Now</button>
+    </div>
+</div>
+
+<div class="product-card" [hidden]="hiddenItem">
+    <div class="product-image">
+        <img src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/primary/ProductShowcasesampleimages/JPEG/Product+Showcase-1.jpg" alt="Product Image">
+    </div>
+    <div class="product-info">
+        <h2>Product Name</h2>
+        <p class="price">$49.99</p>
+        <p class="description">This is a brief description of the product.</p>
+        <button class="buy-button">Buy Now</button>
+    </div>
+</div>
+
+
+  
+  

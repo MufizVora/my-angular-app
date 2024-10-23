@@ -3,14 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TestComponent } from './test/test.component';
+import { myAppComponent } from './myAPP/myApp.component';
+import { NotificationComponent } from './notification/notification.component';
+import { SignalComponent } from './signal/signal.component';
+import { EventComponent } from './event/event.component';
+import { ClassStyleComponent } from './class-style/class-style.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestComponent,
+    myAppComponent,
+    NotificationComponent,
+    SignalComponent,
+    EventComponent,
+    ClassStyleComponent,
+    TwoWayBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

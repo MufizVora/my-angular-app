@@ -1,0 +1,32 @@
+<p>Class Binding</p>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<h2 style="text-align:center">User Profile Card</h2>
+
+<div class="card" [class.normal]="emp.priority==='normal' " [ngStyle]="{
+    'opacity': emp.active ? 1 : 0.2
+}">
+  <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
+  <h1>{{emp.name}}</h1>
+  <p class="title">{{emp.designation}}</p>
+  <!-- <p [ngClass] = "emp.active ? 'active' : 'inactive' ">{{emp.active ? 'Active' : 'Inactive'}}</p> -->
+  <p [ngClass] = "{
+    'active': emp.active,
+    'inactive': !emp.active
+}">{{emp.active ? 'Active' : 'Inactive'}}</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+</body>
+</html>
