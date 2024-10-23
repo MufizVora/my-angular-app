@@ -1,0 +1,26 @@
+<p>Input Field Reference Template</p>
+<br />
+<input type="text" #inputValue />
+<br />
+<button (click)="getInputValue(inputValue)">Submit</button>
+<br />
+<p>Value : {{inpValue}}</p>
+<br />
+<br />
+<p>Check-Box Reference Template</p>
+<br />
+<input type="checkbox" value="Angular" #checkValue />Angular
+<br />
+<button (click)="getCheckBoxValue(checkValue)">Submit</button>
+<br />
+<p>Value : {{checkBoxValue}}</p>
+<p>Radio Button Field Reference Template</p>
+<input type="radio" name="gender" value="Male" #m/>Male
+<input type="radio" name="gender" value="Female" #f/>Female
+<br />
+<button (click)="getRadioValue(m.checked? m.value : f.value)">Submit</button>
+<br />
+<br />
+Redio Value : {{redioValue}}
+<br />
+<br />

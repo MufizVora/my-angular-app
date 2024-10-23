@@ -9,5 +9,19 @@
 <br />
 
 <p>Check-Box Tow Way Binding</p>
-<input type="checkbox" [(ngModel)]="isChecked">
+<input type="checkbox" [(ngModel)]="isChecked" />
 Checked : {{isChecked}}
+
+<p>Radio Button Tow Way Binding</p>
+<input type="radio" value="Male" [(ngModel)]="gender"/>Male
+<input type="radio" value="Female" [(ngModel)]="gender"/>Female
+<br />
+<br />
+Gender : {{gender}}
+<br />
+<br />
+<p>Range Button Two Way Binding</p>
+<input type="range" [(ngModel)]="range" />
+<br />
+<br />
+Range :{{range}}

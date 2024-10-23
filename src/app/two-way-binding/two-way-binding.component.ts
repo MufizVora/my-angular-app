@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./two-way-binding.component.scss']
 })
 export class TwoWayBindingComponent {
-  email:String = 'abc@gmail.com'
+  email:String = 'abc@gmail.com';
   isChecked:Boolean = false;
+  gender:String = 'Male';
+  range:Number = 0;
 }
