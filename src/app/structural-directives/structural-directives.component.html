@@ -1,0 +1,77 @@
+<br/>
+<br />
+<p>1.NgFor Example With Local Variable Structural Directive</p>
+<br>
+<br>
+<table style="width: 100%;">
+    <tr>
+      <th>Sr No</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+    </tr>
+    <tr *ngFor="
+    let emp of employees; 
+    let i = index; 
+    first as firstItem;
+    let l = last;
+    let o = odd;
+    let e = even;
+    "
+
+    [ngClass]="{
+        'first' : firstItem,
+        'last' : l,
+        'odd' : o,
+        'even' : e,
+        
+    }"
+    > <!-- Another way to use index : index as i -->
+        <td>{{ i+1 }}</td>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.department}}</td>
+    </tr>
+  </table>
+<br>
+<br>
+<br>
+<p>2.Condition Logic Binding NgFor</p>
+<br>
+<div>
+    <table style="width: 250px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let e of employees">
+                <tr *ngIf="e.age > 25">
+                    <td>{{e.name}}</td>
+                    <td>{{e.age}}</td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<br>
+<p>3.Nested For Loop</p>
+<br>
+<div *ngFor="let e of employees">
+    <p>Employee Name: {{e.name}}</p>
+    <p>Employee Age : {{e.age}}</p>
+    <div class="nested">
+        <div *ngFor="let s of e.skills">
+            <p>Employee Skills : {{s}}</p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<p>4.Looping Through Object</p>
+<div *ngFor="let userList of users | keyvalue">
+    <p>{{userList.key}} : {{userList.value}}</p>
+</div>

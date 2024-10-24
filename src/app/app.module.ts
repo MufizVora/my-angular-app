@@ -12,6 +12,11 @@ import { ClassStyleComponent } from './class-style/class-style.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { ReferenceTemplateComponent } from './reference-template/reference-template.component';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { PushSpliceComponent } from './push-splice/push-splice.component';
+import { CustomDirectiveDirective } from './appDirectives/custom-directive.directive';
+import { DirectivesComponent } from './directives/directives.component';
+import { ScrollToTopDirectiveDirective } from './appDirectives/scroll-to-top-directive.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { ReferenceTemplateComponent } from './reference-template/reference-templ
     EventComponent,
     ClassStyleComponent,
     TwoWayBindingComponent,
-    ReferenceTemplateComponent
+    ReferenceTemplateComponent,
+    StructuralDirectivesComponent,
+    PushSpliceComponent,
+    CustomDirectiveDirective,
+    DirectivesComponent,
+    ScrollToTopDirectiveDirective
   ],
   imports: [
     BrowserModule,

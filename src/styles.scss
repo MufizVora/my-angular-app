@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+.card-warning {
+    background-color: #fff8e1;
+    border: 1px solid #ffcc26;
+    border-radius: 8px;
+    width: 200px;
+    height: 130px;
+    padding: 10px;
+    box-shadow: 0 2px 6px 0 rgb(226 184 46 / 29%);
+    color: #403c2f;
+    p{
+        margin-bottom: 7px;
+    }
+
+    button{
+        background-color: #ffcc26;
+        border: 1px solid #d9ae22;
+        padding: 3px 5px;
+        border-radius: 5px;
+        line-height: 1.2;
+    }
+}
+
+.card-success{
+    background-color: #f0fff0;
+    border: 1px solid #26ff28;
+    border-radius: 8px;
+    width: 200px;
+    height: 130px;
+    padding: 10px;
+    box-shadow: 0 2px 6px 0 rgb(38 255 40 / 35%);
+    color: #403c2f;
+}

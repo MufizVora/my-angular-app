@@ -1,0 +1,27 @@
+<br>
+<br>
+<h4>Add Employee</h4>
+<table style="width: 100%;">
+    <tr>
+        <td><input type="text" placeholder="Enter Name" #name></td>
+        <td><input type="text" placeholder="Enter Department" #department></td>
+        <td><button (click)="addEmployee(name.value, department.value)">Add Employee</button></td>
+    </tr>
+</table>
+<br>
+<h4>Employee List</h4>
+<br>
+<table style="width: 100%;">
+    <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Remove</th>
+    </tr>
+    <tr *ngFor="let e of employees; let i = index">
+        <td>{{ i+1 }}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.department}}</td>
+        <td><button (click)="removeEmployee(i)">Remove</button></td>
+    </tr>
+</table>
