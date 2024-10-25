@@ -17,6 +17,8 @@ import { PushSpliceComponent } from './push-splice/push-splice.component';
 import { CustomDirectiveDirective } from './appDirectives/custom-directive.directive';
 import { DirectivesComponent } from './directives/directives.component';
 import { ScrollToTopDirectiveDirective } from './appDirectives/scroll-to-top-directive.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BootstrapComponentComponent } from './bootstrap-component/bootstrap-component.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { ScrollToTopDirectiveDirective } from './appDirectives/scroll-to-top-dir
     PushSpliceComponent,
     CustomDirectiveDirective,
     DirectivesComponent,
-    ScrollToTopDirectiveDirective
+    ScrollToTopDirectiveDirective,
+    BootstrapComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
