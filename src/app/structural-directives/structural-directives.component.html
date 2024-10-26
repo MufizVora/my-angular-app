@@ -75,3 +75,24 @@
 <div *ngFor="let userList of users | keyvalue">
     <p>{{userList.key}} : {{userList.value}}</p>
 </div>
+<br>
+<br>
+<p>5. If Condition In Angular</p>
+<div *ngIf="userLoggedIn">Welcome, {{username}}</div>
+<div *ngIf="!userLoggedIn">Please log in</div>
+<br>
+<br>
+<p>5. If-Else Condition In Angular</p>
+<div *ngIf="userLoggedIn; else userLoggedOut">Welcome, {{username}}</div>
+<ng-template #userLoggedOut>Please log in</ng-template>
+<br>
+<br>
+<p>6. Switch Case In Angular</p>
+<div [ngSwitch] = "grade">
+    <p *ngSwitchCase="'A'">Outstanding</p>
+    <p *ngSwitchCase="'B'">VeryGood</p>
+    <p *ngSwitchCase="'C'">Good</p>
+    <p *ngSwithCse="'D'">Ok</p>
+    <p *ngSwitchDefault>Fail</p>
+</div>
+<br>

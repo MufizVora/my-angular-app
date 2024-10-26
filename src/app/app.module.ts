@@ -19,6 +19,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { ScrollToTopDirectiveDirective } from './appDirectives/scroll-to-top-directive.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BootstrapComponentComponent } from './bootstrap-component/bootstrap-component.component';
+import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
+import { CustomPipePipe } from './pipes/custom-pipe.pipe';
+import { ServiceComponentComponent } from './service-component/service-component.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { BootstrapComponentComponent } from './bootstrap-component/bootstrap-com
     CustomDirectiveDirective,
     DirectivesComponent,
     ScrollToTopDirectiveDirective,
-    BootstrapComponentComponent
+    BootstrapComponentComponent,
+    BuiltInPipesComponent,
+    CustomPipePipe,
+    ServiceComponentComponent,
   ],
   imports: [
     BrowserModule,

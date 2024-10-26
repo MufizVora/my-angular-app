@@ -58,4 +58,9 @@ users:any = {
   user3 : 'Smith Johnson',
   user4 : 'Ajaz Patel Gate No3',
 }
+
+username:string = 'Mufiz';
+userLoggedIn:boolean = false;
+
+grade:string = 'A';
 }

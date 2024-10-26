@@ -1,0 +1,18 @@
+<p>Let's understand built-in pipes</p>
+<p>1.Uppercase Pipe</p>  
+<h1>{{title | uppercase}}</h1>
+<br>
+<p>2.Currency Pipe</p>
+<h4>{{curr | currency}}</h4>
+<h4>{{curr | currency : "EUR"}}</h4>
+<h4>{{curr | currency : "INR"}}</h4>
+<h4>{{curr | currency : "PKR"}}</h4>
+<h4>{{curr | currency : "SAR"}}</h4>
+<br>
+<p>3.Date Pipe</p>
+<h4>{{date | date}}</h4>
+<h4>{{date | date : 'fullDate'}}</h4>
+<br>
+<p>Let's understand custom pipes</p>
+<h1>{{title | customPipe : 'Custom '}}</h1>
+<br>
