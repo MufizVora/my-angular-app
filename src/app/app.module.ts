@@ -22,6 +22,8 @@ import { BootstrapComponentComponent } from './bootstrap-component/bootstrap-com
 import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
 import { CustomPipePipe } from './pipes/custom-pipe.pipe';
 import { ServiceComponentComponent } from './service-component/service-component.component';
+import { ApiComponentComponent } from './api-component/api-component.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,12 +45,15 @@ import { ServiceComponentComponent } from './service-component/service-component
     BuiltInPipesComponent,
     CustomPipePipe,
     ServiceComponentComponent,
+    ApiComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
