@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../services/api-service.service';
+// import { Users } from '../interfaces/users.interface';
 
 @Component({
   selector: 'app-api-component',
@@ -10,6 +11,7 @@ import { ApiServiceService } from '../services/api-service.service';
 export class ApiComponentComponent implements OnInit {
 
   apiData:any[] = [];
+  // apiData:Users[] = [];
 
   constructor(private apiService : ApiServiceService){
 
@@ -28,7 +30,11 @@ export class ApiComponentComponent implements OnInit {
  /* Second way to fetch api */
   ngOnInit(){
     this.apiService.getApiData().subscribe({
-      next: (response) => {
+      next: (response:any[]) => {
+/*       next: (response:Users[]) => {
+        This is how we can access api data by checking it's type
+        response[0].name;
+        response[1].username; */
         this.apiData = response;
       },
       error: (error) => {
