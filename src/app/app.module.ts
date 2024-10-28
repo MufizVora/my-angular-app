@@ -24,6 +24,7 @@ import { CustomPipePipe } from './pipes/custom-pipe.pipe';
 import { ServiceComponentComponent } from './service-component/service-component.component';
 import { ApiComponentComponent } from './api-component/api-component.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponentComponent } from './form-component/form-component.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     CustomPipePipe,
     ServiceComponentComponent,
     ApiComponentComponent,
+    FormComponentComponent,
   ],
   imports: [
     BrowserModule,
