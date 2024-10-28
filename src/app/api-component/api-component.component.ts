@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../services/api-service.service';
-// import { Users } from '../interfaces/users.interface';
+import { Users } from '../interfaces/users.interface';
+import { LatestPrice, OrderBook, Students } from '../interfaces/data.interface';
 
 @Component({
   selector: 'app-api-component',
@@ -10,8 +11,8 @@ import { ApiServiceService } from '../services/api-service.service';
 })
 export class ApiComponentComponent implements OnInit {
 
-  apiData:any[] = [];
-  // apiData:Users[] = [];
+  // apiData:any[] = [];
+  apiData:Users[] = [];
 
   constructor(private apiService : ApiServiceService){
 
@@ -30,15 +31,30 @@ export class ApiComponentComponent implements OnInit {
  /* Second way to fetch api */
   ngOnInit(){
     this.apiService.getApiData().subscribe({
-      next: (response:any[]) => {
-/*       next: (response:Users[]) => {
-        This is how we can access api data by checking it's type
-        response[0].name;
-        response[1].username; */
+      // next: (response:any[]) => {
+      next: (response:Users[]) => {
+        //This is how we can access api data by checking it's type
+        //response[0].name;
+        //response[1].username;
         this.apiData = response;
       },
       error: (error) => {
         console.error(error);
+      }
+    })
+    this.apiService.getStudentData().subscribe({
+      next: (response:Students) => {
+        console.log(response);
+      }
+    })
+    this.apiService.getOrderBookData().subscribe({
+      next: (response:OrderBook) => {
+        console.log(response);
+      }
+    })
+    this.apiService.getLatestPriceData().subscribe({
+      next: (response:LatestPrice) => {
+        console.log(response);
       }
     })
   }
