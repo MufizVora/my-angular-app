@@ -15,3 +15,7 @@
 <app-api-component></app-api-component>
 <app-form-component></app-form-component>
 <app-reactive-form-component></app-reactive-form-component>
+<div>
+    <h1>Task List</h1>
+    <app-communication-component *ngFor="let t of tasks" [task]="t" (taskDeleted)="deleteTask(t)"></app-communication-component>
+</div>

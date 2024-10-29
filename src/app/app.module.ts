@@ -26,6 +26,7 @@ import { ApiComponentComponent } from './api-component/api-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { ReactiveFormComponentComponent } from './reactive-form-component/reactive-form-component.component';
+import { CommunicationComponentComponent } from './communication-component/communication-component.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ReactiveFormComponentComponent } from './reactive-form-component/reacti
     ApiComponentComponent,
     FormComponentComponent,
     ReactiveFormComponentComponent,
+    CommunicationComponentComponent,
   ],
   imports: [
     BrowserModule,
