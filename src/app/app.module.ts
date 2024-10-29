@@ -10,7 +10,7 @@ import { SignalComponent } from './signal/signal.component';
 import { EventComponent } from './event/event.component';
 import { ClassStyleComponent } from './class-style/class-style.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReferenceTemplateComponent } from './reference-template/reference-template.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { PushSpliceComponent } from './push-splice/push-splice.component';
@@ -25,6 +25,7 @@ import { ServiceComponentComponent } from './service-component/service-component
 import { ApiComponentComponent } from './api-component/api-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponentComponent } from './form-component/form-component.component';
+import { ReactiveFormComponentComponent } from './reactive-form-component/reactive-form-component.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +49,13 @@ import { FormComponentComponent } from './form-component/form-component.componen
     ServiceComponentComponent,
     ApiComponentComponent,
     FormComponentComponent,
+    ReactiveFormComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule
 

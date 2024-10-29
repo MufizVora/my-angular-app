@@ -1,3 +1,5 @@
+<!-- This is the example of Template driven form -->
+ <h1>Template Driven Form Example</h1>
 <div>
     <h1>User</h1>
     <form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
@@ -21,6 +23,6 @@
              required
              />
         </div>
-        <button type="submit" [disabled]="userForm.invalid">Submit</button>
+        <button type="submit" [disabled]="userForm.invalid || !validateEmail()">Submit</button>
     </form>
 </div>

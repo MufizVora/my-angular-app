@@ -1,0 +1,29 @@
+<!-- This is the example of Reactive form -->
+ <br>
+ <br>
+ <h1>Reactive Form Example</h1>
+ <div>
+    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <div>
+            <label for="name">Name :</label>
+            <input
+            type="text"
+            name="name"
+            id="name" 
+            placeholder="Enter Name Here"
+            formControlName = "name"
+            />
+        </div>
+        <div>
+            <label for="name">Email :</label>
+            <input
+            type="email"
+            name="email"
+            id="email" 
+            placeholder="Enter Email Here"
+            formControlName = "email"
+            />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+ </div>
