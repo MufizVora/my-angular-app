@@ -15,7 +15,7 @@
             />
         </div>
         <div>
-            <label for="name">Email :</label>
+            <label for="email">Email :</label>
             <input
             type="email"
             name="email"
@@ -24,6 +24,44 @@
             formControlName = "email"
             />
         </div>
-        <button type="submit">Submit</button>
+        <div formGroupName="address">
+            <label for="street">Street :</label>
+            <input
+            type="text"
+            name="street"
+            id="street" 
+            placeholder="Enter Street Here"
+            formControlName = "street"
+            />
+            <label for="city">City :</label>
+            <input
+            type="text"
+            name="city"
+            id="city" 
+            placeholder="Enter City Here"
+            formControlName = "city"
+            />
+            <label for="state">State :</label>
+            <input
+            type="text"
+            name="state"
+            id="state" 
+            placeholder="Enter State Here"
+            formControlName = "state"
+            />
+        </div>
+        <div formArrayName="phoneNumbers">
+            <div *ngFor="let phoneCtrl of phoneNumbers.controls; let i = index">
+                <label for="phoneNumbers">Phone Number {{ i+1 }} :</label>
+                <input type="text" [formControlName] = "i" />
+                <button type="button" (click)="removePhoneNumber(i)">Remove Phone Number</button>
+            </div>
+            <div>
+                <button type="button" (click)="addPhoneNumber()">Add Phone Number</button>
+            </div>
+        </div>
+        <div>
+            <button type="submit" [disabled]="!userForm.valid">Submit</button>
+        </div>
     </form>
  </div>
