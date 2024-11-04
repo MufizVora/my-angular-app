@@ -13,5 +13,4 @@ export class AppComponent {
   deleteTask(task : string){
     this.tasks = this.tasks.filter((t) => t !== task);
   }
-
 }
