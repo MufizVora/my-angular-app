@@ -10,9 +10,8 @@ export class CustomDirectiveDirective implements OnInit {
   constructor(private element : ElementRef) { }
 
   ngOnInit(): void {
-    /* added different color with same directive */
+    /* added different color with the same directive */
     this.element.nativeElement.style.backgroundColor = this.color;
-
     /* added styles */
     // this.element.nativeElement.style.backgroundColor = '#f5f5f5';
     this.element.nativeElement.style.border = '1px solid #ddd';    
