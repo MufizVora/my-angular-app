@@ -19,3 +19,5 @@
     <h1>Task List</h1>
     <app-communication-component *ngFor="let t of tasks" [task]="t" (taskDeleted)="deleteTask(t)"></app-communication-component>
 </div>
+
+<app-child [childdata]="parentData"></app-child>

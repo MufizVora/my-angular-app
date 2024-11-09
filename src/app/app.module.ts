@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
 import { NotificationComponent } from './notification/notification.component';
 import { SignalComponent } from './signal/signal.component';
 import { EventComponent } from './event/event.component';
@@ -26,11 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { ReactiveFormComponentComponent } from './reactive-form-component/reactive-form-component.component';
 import { CommunicationComponentComponent } from './communication-component/communication-component.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
     NotificationComponent,
     SignalComponent,
     EventComponent,
@@ -50,6 +49,7 @@ import { CommunicationComponentComponent } from './communication-component/commu
     FormComponentComponent,
     ReactiveFormComponentComponent,
     CommunicationComponentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
