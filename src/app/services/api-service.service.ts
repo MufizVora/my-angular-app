@@ -17,6 +17,8 @@ export class ApiServiceService {
   getApiData() : Observable<Users[]> {
     return this.httpclient.get<Users[]>(this.apiUrl)
   }
+  // Command to run below Apis
+  // => json-server --watch data.json --port 1111
   getStudentData() : Observable<Students> {
     return this.httpclient.get<Students>('http://localhost:1111/students')
   }
