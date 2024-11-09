@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignalComponent {
 
-  // set signal
+  // writable set signal
   firstName = signal("Mufiz");
   lastName = signal("Vora");
 
@@ -22,7 +22,7 @@ export class SignalComponent {
     this.lastName.set(lname);
   }
 
-  // update signal
+  // writable update signal
   quantity = signal<number>(1);
 
   addQuantity(){
@@ -33,7 +33,7 @@ export class SignalComponent {
     this.quantity.update(q => q-1)
   }
 
-  // mutate array signal
+  // writable mutate array signal
   constructor(private fb: FormBuilder){}
     employeeForm!: FormGroup;
 
@@ -66,7 +66,7 @@ export class SignalComponent {
       })
     }
 
-    // mutate object property
+    // writable mutate object property
 
     product = signal({
       name: 'Laptop',
