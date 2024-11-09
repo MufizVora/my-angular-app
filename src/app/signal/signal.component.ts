@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignalComponent {
 
+  width = '300px';
   // writable set signal
   firstName = signal("Mufiz");
   lastName = signal("Vora");

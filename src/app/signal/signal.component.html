@@ -48,8 +48,8 @@
 <!-- Employee List Table -->
 <div *ngIf="employees() && employees().length > 0">
   <h3>Employee List</h3>
-  <table border="1">
-    <thead>
+  <table [width]="width" border="1">
+    <thead style="text-align: center;">
       <tr>
         <th>Name</th>
         <th>Position</th>
