@@ -1,6 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { single } from 'rxjs';
 
 @Component({
   selector: 'app-signal',
