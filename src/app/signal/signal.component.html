@@ -40,6 +40,54 @@
     <button class="plus" aria-label="Increase" (click)="addQuantity()">&plus;</button>
   </div>
 
+
+<p>Signal-Mutate-Array-Element</p>
+<!-- Button to toggle visibility of Add Employee form -->
+<button (click)="toggleAddBlock()">Add Employee</button>
+
+<!-- Employee List Table -->
+<div *ngIf="employees() && employees().length > 0">
+  <h3>Employee List</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Department</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees()">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.position }}</td>
+        <td>{{ employee.department }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Add Employee Form (shown when empAdding is true) -->
+<div *ngIf="empAdding()">
+  <h3>Add New Employee</h3>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" />
+    </div>
+    <div>
+      <label for="position">Position:</label>
+      <input id="position" formControlName="position" />
+    </div>
+    <div>
+      <label for="department">Department:</label>
+      <input id="department" formControlName="department" />
+    </div>
+
+    <button type="submit" [disabled]="employeeForm.invalid">Submit</button>
+  </form>
+</div>
+
+
 <p>Signal-Mutate-Object-Property</p>
 <div>
     <table border="4">

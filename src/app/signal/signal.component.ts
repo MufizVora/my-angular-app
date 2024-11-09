@@ -61,7 +61,10 @@ export class SignalComponent {
     }
 
     onSubmit(){
-      console.log(this.employeeForm.value); 
+      // console.log(this.employeeForm.value); 
+      this.employees.mutate(emplist => {
+        emplist.push(this.employeeForm.value);
+      })
     }
 
     // mutate object property
